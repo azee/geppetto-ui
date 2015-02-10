@@ -7,7 +7,7 @@ define([
 
     var ProjectsCollection = Backbone.Collection.extend({
         model: ProjectModel,
-        url: "mockdata/someBeansCollection.json",
+        url: "api/project/all.json",
 
         initialize : function (options) {
             _.bindAll(this);
