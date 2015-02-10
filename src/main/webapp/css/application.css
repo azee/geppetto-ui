@@ -40,16 +40,6 @@ html{
     pointer-events: none;
 }
 
-.chzn-container-multi .chzn-choices .search-choice .search-choice-close {
-    background: url("/imgs/chosen-sprite.png") no-repeat scroll right top transparent;
-    display: block;
-    font-size: 1px;
-    height: 13px;
-    position: absolute;
-    right: 3px;
-    top: 4px;
-    width: 12px;
-}
 
 #page, #main, #mian{
     height: 100%;

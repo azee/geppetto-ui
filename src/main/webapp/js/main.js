@@ -19,14 +19,9 @@ require.config({
         bootstrap : 'libs/twitter/bootstrap.min',
         text: 'libs/require/text',
         EmptyHeader : 'views/layout/EmptyHeader',
-        BlankFooter : 'views/layout/BlankFooter',
         PageLayoutView: 'views/layout/PageLayoutView',
-        SomeBeansView : 'views/someBean/SomeBeansView',
-        UserProfileView : 'views/user/UserProfileView',
-        SomeBeanDetailsView: 'views/someBean/SomeBeanDetailsView',
-        SomeBeansPageView: 'views/someBean/SomeBeansPageView',
-        SomeBeanPageView: 'views/someBean/SomeBeanPageView',
-        SomeBeanPagerItemsView: 'views/pager/SomeBeanPagerItemsView'
+        DashboardView : 'views/dashboard/DashboardView',
+        UserProfileView : 'views/user/UserProfileView'
     },
     shim: {
         jquery : {

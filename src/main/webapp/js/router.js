@@ -16,16 +16,14 @@ define([
 
     var AppRouter = Backbone.Router.extend({
         routes:{
-            '':'showMainPage',
-            'some-beans?:params':'showSomeBeans',
-            'someBean/:id':'showSomeBean',
+            '':'showDashboard',
             'user/profile':'showUserProfile',
             // Default
             '*actions':'defaultAction'
         },
 
         initialize : function () {
-            _.bindAll(this, 'showMainPage', 'showSomeBeans', 'showSomeBean', 'showUserProfile', 'showPage');
+            _.bindAll(this, 'showDashboard', 'showUserProfile', 'showPage');
         },
 
         showPage : function (MainView,HeaderView,FooterView) {
@@ -40,42 +38,19 @@ define([
             this.setView(page);
         },
 
-        showMainPage : function () {
+        showDashboard : function () {
             this.showParams = {
                 el:'#page',
                 mainContentOptions:{
                 },
                 headerOptions:{
-                    activeTitle:'Main Page',
-                    pageTitle : 'Main Page'
+                    activeTitle:'Dashboard',
+                    pageTitle : 'Dashboard'
                 }
             };
-            require(['SomeBeansView'], this.showPage);
+            require(['DashboardView'], this.showPage);
         },
 
-        showSomeBeans : function (params) {
-            this.showParams = {
-                el:'#page',
-                mainContentOptions:{
-                    params : $.deparam(params)
-                },
-                headerOptions:{
-                    activeTitle:'Some Beans',
-                    pageTitle : 'Some Beans'
-                }
-            };
-            require(['SomeBeansPageView'], this.showPage);
-        },
-
-        showSomeBean : function (id) {
-            this.showParams = {
-                el:'#page',
-                mainContentOptions:{
-                    id : id
-                }
-            };
-            require(['SomeBeanDetailsView'], this.showPage);
-        },
 
         showUserProfile : function () {
             this.showParams = {

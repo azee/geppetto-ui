@@ -2,11 +2,11 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'models/someBean/SomeBeanModel'
-], function ($, _, Backbone, SomeBeanModel) {
+    'models/project/ProjectModel'
+], function ($, _, Backbone, ProjectModel) {
 
-    var SomeBeansCollection = Backbone.Collection.extend({
-        model: SomeBeanModel,
+    var ProjectsCollection = Backbone.Collection.extend({
+        model: ProjectModel,
         url: "mockdata/someBeansCollection.json",
 
         initialize : function (options) {
@@ -25,5 +25,5 @@ define([
         }
     });
 
-    return SomeBeansCollection;
+    return ProjectsCollection;
 });

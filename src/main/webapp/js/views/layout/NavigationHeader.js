@@ -20,12 +20,12 @@ define([
 //            TODO: pull menus from backend?
             this.menus = [
                 {
-                    title: "Main Page",
+                    title: "Dashboard",
                     url: "#/"
                 },
                 {
-                    title: "Some Beans",
-                    url: "#/some-beans?skip=0&limit=20"
+                    title: "Profile",
+                    url: "#/user/profile"
                 },
             ];
 
@@ -72,7 +72,6 @@ define([
             var user = $.extend({}, SessionModel.getInstance().get("user"));
 
             //compile handlebars template
-            //TODO: make menu items backed by some collection and models
             this.$el.html(this.template({
                 "menus": this.menus,
                 "userMenus": this.userMenus,
