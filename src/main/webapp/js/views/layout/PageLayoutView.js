@@ -33,7 +33,7 @@ define([
         },
 
         footerContentOptions : {
-
+            el : "#footer"
         },
 
         initialize : function(options) {
