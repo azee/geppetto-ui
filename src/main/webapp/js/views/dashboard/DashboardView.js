@@ -3,25 +3,59 @@ define([
     'underscore',
     'backbone',
     'text!templates/dashboard/dashboardTemplate.hbs',
+    'collections/projects/ProjectsCollection',
+    'views/projects/ProjectPreviewView',
     //dirty hack for handlebars loading wait
     'handlebars',
     'libs/ginny/ginny'
-], function ($, _, Backbone, dashboardTemplate) {
+], function ($, _, Backbone, dashboardTemplate, ProjectsCollection, ProjectPreviewView) {
 
     var SomeBeansPageView = Backbone.View.extend({
 
-        template:Handlebars.compile(dashboardTemplate),
+        template: Handlebars.compile(dashboardTemplate),
+
+        //events:{
+        //    'keyup #filter':'filter'
+        //},
 
         initialize:function (options) {
-             _.bindAll(this, 'render', 'remove'); // fixes loss of context for 'this' within methods
+            this.collection = new ProjectsCollection();
+             _.bindAll(this, 'render', 'remove', 'renderProjects', 'appendProjects', 'onError', 'filter'); // fixes loss of context for 'this' within methods
             this.subviews = [];
+
         },
 
         render:function () {
             this.$el.html(this.template({title: this.titleFilter}));
-
-            //ToDo: add sub views - projects list and project preview
+            $('#filter').keyup(this.filter);
+            this.collection.fetch({success: this.renderProjects, error: this.onError});
             return this
+        },
+
+        renderProjects: function(collection){
+            //$("#spinner").hide();
+            this.$el.find("#projects").empty();
+            collection.each(this.appendProjects);
+            this.delegateEvents();
+            return this;
+        },
+
+        appendProjects: function (item) {
+            var itemView = new ProjectPreviewView({
+                model:item,
+                el:this.$el.find("#projects")
+            });
+            itemView.render();
+            this.subviews.push(itemView);
+        },
+
+        onError: function(collection, response, options){
+            console.log("Error");
+        },
+
+        filter:function (event) {
+            var criteria = $(event.target).val().toLowerCase();
+            this.renderProjects(this.collection.search(criteria));
         },
 
         remove:function (attributes) {

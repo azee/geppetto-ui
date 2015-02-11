@@ -1,7 +1,7 @@
 // Filename: router.js
 /**
  * Base router of the application
- * all pages urls should be aggregated here and actions
+ * all.json pages urls should be aggregated here and actions
  * taken appropriately
  */
 define([

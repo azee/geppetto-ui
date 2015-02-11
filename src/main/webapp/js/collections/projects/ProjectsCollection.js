@@ -7,10 +7,14 @@ define([
 
     var ProjectsCollection = Backbone.Collection.extend({
         model: ProjectModel,
-        url: "api/project/all.json",
+        url: "/api/project/all.json",
 
-        initialize : function (options) {
-            _.bindAll(this);
+        initialize: function (options) {
+            _.bindAll(this,'parse','search');
+        },
+
+        parse: function(data){
+            return data;
         },
 
         search: function (criteria) {

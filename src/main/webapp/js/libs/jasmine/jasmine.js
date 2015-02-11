@@ -29,7 +29,7 @@ jasmine.undefined = jasmine.___undefined___;
 jasmine.VERBOSE = false;
 
 /**
- * Default interval in milliseconds for event loop yields (e.g. to allow network activity or to refresh the screen with the HTML-based runner). Small values here may result in slow test running. Zero means no updates until all tests have completed.
+ * Default interval in milliseconds for event loop yields (e.g. to allow network activity or to refresh the screen with the HTML-based runner). Small values here may result in slow test running. Zero means no updates until all.json tests have completed.
  *
  */
 jasmine.DEFAULT_UPDATE_INTERVAL = 250;
@@ -209,7 +209,7 @@ jasmine.any = function(clazz) {
 };
 
 /**
- * Returns a matchable subset of a JSON object. For use in expectations when you don't care about all of the
+ * Returns a matchable subset of a JSON object. For use in expectations when you don't care about all.json of the
  * attributes on the object.
  *
  * @example
@@ -379,7 +379,7 @@ jasmine.Spy.prototype.andCallFake = function(fakeFunc) {
 };
 
 /**
- * Resets all of a spy's the tracking variables so that it can be used again.
+ * Resets all.json of a spy's the tracking variables so that it can be used again.
  *
  * @example
  * spyOn(foo, 'bar');
@@ -475,7 +475,7 @@ jasmine.log = function() {
  * @see jasmine.createSpy
  * @param obj
  * @param methodName
- * @return {jasmine.Spy} a Jasmine spy that can be chained with all spy methods
+ * @return {jasmine.Spy} a Jasmine spy that can be chained with all.json spy methods
  */
 var spyOn = function(obj, methodName) {
   return jasmine.getEnv().currentSpec.spyOn(obj, methodName);
@@ -587,7 +587,7 @@ if (isCommonJS) exports.afterEach = afterEach;
 /**
  * Defines a suite of specifications.
  *
- * Stores the description and all defined specs in the Jasmine environment as one suite of specs. Variables declared
+ * Stores the description and all.json defined specs in the Jasmine environment as one suite of specs. Variables declared
  * are accessible by calls to beforeEach, it, and afterEach. Describe blocks can be nested, allowing for specialization
  * of setup in some tests.
  *

@@ -4,7 +4,7 @@ define(['jquery'], function ($) {
         var obj = {},
             coerce_types = { 'true':!0, 'false':!1, 'null':null };
 
-        // Iterate over all name=value pairs.
+        // Iterate over all.json name=value pairs.
         $.each(params.replace(/\+/g, ' ').split('&'), function (j, v) {
             var param = v.split('='),
                 key = decode(param[0]),

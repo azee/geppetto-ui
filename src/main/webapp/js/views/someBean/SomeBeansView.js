@@ -21,7 +21,7 @@ define([
         initialize:function () {
             this.collection = new SomeBeansCollection();
             _.bindAll(this, 'render', 'appendItem', 'renderItems'); // fixes loss of context for 'this' within methods
-            this.collection.fetch({success:this.renderItems});//render view once all backend data obtained
+            this.collection.fetch({success:this.renderItems});//render view once all.json backend data obtained
             this.collection.bind('add', this.appendItem); // collection event binder
             this.subviews = [];
         },

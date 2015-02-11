@@ -35,7 +35,7 @@ define([
                'redrawPage', 'mainRender', 'intervalFetch'); // fixes loss of context for 'this' within methods
             this.collection.fetch({success:this.mainRender});
 
-            //Clear all intervals
+            //Clear all.json intervals
             var interval_id = window.setInterval("", 9999); // Get a reference to the last interval +1
             for (var i = 1; i < interval_id; i++){
                 clearInterval(i);

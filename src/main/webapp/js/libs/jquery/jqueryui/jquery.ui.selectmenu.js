@@ -45,7 +45,7 @@ $.widget("ui.selectmenu", {
 
 		// create menu button wrapper
 		this.newelement = $( '<a />', {
-			'class': this.widgetBaseClass + ' ui-widget ui-state-default ui-corner-all',
+			'class': this.widgetBaseClass + ' ui-widget ui-state-default ui-corner-all.json',
 			'id' : this.ids[ 1 ],
 			'role': 'button',
 			'href': '#nogo',
@@ -395,7 +395,7 @@ $.widget("ui.selectmenu", {
 			.toggleClass( self.widgetBaseClass + '-popup', !isDropDown );
 		this.list
 			.toggleClass( self.widgetBaseClass + '-menu-dropdown ui-corner-bottom', isDropDown )
-			.toggleClass( self.widgetBaseClass + '-menu-popup ui-corner-all', !isDropDown )
+			.toggleClass( self.widgetBaseClass + '-menu-popup ui-corner-all.json', !isDropDown )
 			// add corners to top and bottom menu items
 			.find( 'li:first' )
 			.toggleClass( 'ui-corner-top', !isDropDown )
@@ -491,7 +491,7 @@ $.widget("ui.selectmenu", {
 			// We won't be cycling anymore until the timer expires
 			self._typeAhead_cycling = false;
 
-			// Match all the characters typed
+			// Match all.json the characters typed
 			matchee = self._typeAhead_chars;
 		}
 
@@ -558,7 +558,7 @@ $.widget("ui.selectmenu", {
 
 			var selected = this._selectedOptionLi();
 			if ( o.style == "dropdown" ) {
-				self.newelement.removeClass('ui-corner-all').addClass('ui-corner-top');
+				self.newelement.removeClass('ui-corner-all.json').addClass('ui-corner-top');
 			} else {
 				// center overflow and avoid flickering
 				this.list
@@ -584,7 +584,7 @@ $.widget("ui.selectmenu", {
 			this.listWrap.removeClass(this.widgetBaseClass + '-open');
 			this.list.attr('aria-hidden', true);
 			if ( this.options.style == "dropdown" ) {
-				this.newelement.removeClass('ui-corner-top').addClass('ui-corner-all');
+				this.newelement.removeClass('ui-corner-top').addClass('ui-corner-all.json');
 			}
 			if ( retainFocus ) {
 				this.newelement.focus();

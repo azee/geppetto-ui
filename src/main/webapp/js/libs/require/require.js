@@ -218,7 +218,7 @@ var requirejs, require, define;
          * It will keep a leading path segment if a .. will become
          * the first path segment, to help with module name lookups,
          * which act like paths, but can be remapped. But the end result,
-         * all paths that use this function should look normalized.
+         * all.json paths that use this function should look normalized.
          * NOTE: this method MODIFIES the input array.
          * @param {Array} ary the array of path segments.
          */
@@ -534,7 +534,7 @@ var requirejs, require, define;
          * defQueue.
          */
         function takeGlobalQueue() {
-            //Push all the globalDefQueue items into the context's defQueue
+            //Push all.json the globalDefQueue items into the context's defQueue
             if (globalDefQueue.length) {
                 //Array splice in the values since the context code has a
                 //local var ref to defQueue, so cannot just reassign the one
@@ -630,7 +630,7 @@ var requirejs, require, define;
 
             inCheckLoaded = true;
 
-            //Figure out the state of all the modules.
+            //Figure out the state of all.json the modules.
             eachProp(enabledRegistry, function (mod) {
                 map = mod.map;
                 modId = map.id;
@@ -1173,7 +1173,7 @@ var requirejs, require, define;
          */
         function getScriptData(evt) {
             //Using currentTarget instead of target for Firefox 2.0's sake. Not
-            //all old browsers will be supported, but this one was easy enough
+            //all.json old browsers will be supported, but this one was easy enough
             //to support and still makes sense.
             var node = evt.currentTarget || evt.srcElement;
 
@@ -1282,7 +1282,7 @@ var requirejs, require, define;
 
                         //Create a brand new object on pkgs, since currentPackages can
                         //be passed in again, and config.pkgs is the internal transformed
-                        //state for all package configs.
+                        //state for all.json package configs.
                         pkgs[pkgObj.name] = {
                             name: pkgObj.name,
                             location: location || pkgObj.name,
@@ -1377,7 +1377,7 @@ var requirejs, require, define;
                     //Grab defines waiting in the global queue.
                     intakeDefines();
 
-                    //Mark all the dependencies as needing to be loaded.
+                    //Mark all.json the dependencies as needing to be loaded.
                     context.nextTick(function () {
                         //Some defines could have been added since the
                         //require call, collect them.
@@ -1623,7 +1623,7 @@ var requirejs, require, define;
              */
             onScriptLoad: function (evt) {
                 //Using currentTarget instead of target for Firefox 2.0's sake. Not
-                //all old browsers will be supported, but this one was easy enough
+                //all.json old browsers will be supported, but this one was easy enough
                 //to support and still makes sense.
                 if (evt.type === 'load' ||
                     (readyRegExp.test((evt.currentTarget || evt.srcElement).readyState))) {
@@ -1660,7 +1660,7 @@ var requirejs, require, define;
      *
      * If the first argument is an array, then it will be treated as an array
      * of dependency string names to fetch. An optional function callback can
-     * be specified to execute when all of those dependencies are available.
+     * be specified to execute when all.json of those dependencies are available.
      *
      * Make a local req variable to help Caja compliance (it assumes things
      * on a require that are not standardized), and to give a short
@@ -1802,7 +1802,7 @@ var requirejs, require, define;
 
             //Set up load listener. Test attachEvent first because IE9 has
             //a subtle issue in its addEventListener and script onload firings
-            //that do not match the behavior of all other browsers with
+            //that do not match the behavior of all.json other browsers with
             //addEventListener support, which fire the onload event for a
             //script right after the script execution. See:
             //https://connect.microsoft.com/IE/feedback/details/648057/script-onload-event-is-not-fired-immediately-after-script-execution
@@ -1835,7 +1835,7 @@ var requirejs, require, define;
                 //then fire the script load event listener before execute
                 //next script' that other browsers do.
                 //Best hope: IE10 fixes the issues,
-                //and then destroys all installs of IE 6-9.
+                //and then destroys all.json installs of IE 6-9.
                 //node.attachEvent('onerror', context.onScriptError);
             } else {
                 node.addEventListener('load', context.onScriptLoad, false);

@@ -28,7 +28,7 @@ define([
             _.bindAll(this, 'render'); // fixes loss of context for 'this' within methods
             _.bindAll(this, 'appendItem'); // fixes loss of context for 'this' within methods
             _.bindAll(this, 'renderItems'); // fixes loss of context for 'this' within methods
-            this.collection.fetch({success : this.renderItems});//render view once all backend data obtained
+            this.collection.fetch({success : this.renderItems});//render view once all.json backend data obtained
             this.collection.bind('add', this.appendItem); // collection event binder
         },
 

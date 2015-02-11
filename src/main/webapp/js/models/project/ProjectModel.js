@@ -7,7 +7,7 @@ define([
 
     var ProjectModel = Backbone.Model.extend({
         id: "",
-        url : 'mockdata/someBeanData.json',
+        url : '/api/project',
 
         methodToURL: {
             'read': "",

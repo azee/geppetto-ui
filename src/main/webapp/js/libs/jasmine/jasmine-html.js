@@ -316,7 +316,7 @@ jasmine.HtmlReporter.ReporterView = function(dom) {
       this.skippedAlert = this.createDom('a', { href: jasmine.HtmlReporter.sectionLink(), className: "skippedAlert bar" });
     }
 
-    this.skippedAlert.innerHTML = "Skipping " + this.skippedCount + " of " + specPluralizedFor(this.totalSpecCount) + " - run all";
+    this.skippedAlert.innerHTML = "Skipping " + this.skippedCount + " of " + specPluralizedFor(this.totalSpecCount) + " - run all.json";
 
     if (this.skippedCount === 1 && isDefined(dom.alert)) {
       dom.alert.appendChild(this.skippedAlert);
@@ -347,7 +347,7 @@ jasmine.HtmlReporter.ReporterView = function(dom) {
   this.complete = function() {
     dom.alert.removeChild(this.runningAlert);
 
-    this.skippedAlert.innerHTML = "Ran " + this.runningSpecCount + " of " + specPluralizedFor(this.totalSpecCount) + " - run all";
+    this.skippedAlert.innerHTML = "Ran " + this.runningSpecCount + " of " + specPluralizedFor(this.totalSpecCount) + " - run all.json";
 
     if (this.failedCount === 0) {
       dom.alert.appendChild(this.createDom('span', {className: 'passingAlert bar'}, "Passing " + specPluralizedFor(this.passedCount)));
@@ -537,7 +537,7 @@ jasmine.TrivialReporter.prototype.reportRunnerStarting = function(runner) {
           ),
 
       this.runnerDiv = this.createDom('div', { className: 'runner running' },
-          this.createDom('a', { className: 'run_spec', href: '?' }, "run all"),
+          this.createDom('a', { className: 'run_spec', href: '?' }, "run all.json"),
           this.runnerMessageSpan = this.createDom('span', {}, "Running..."),
           this.finishedAtSpan = this.createDom('span', { className: 'finished-at' }, ""))
       );

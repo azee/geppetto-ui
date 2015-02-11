@@ -67,6 +67,18 @@ code {
     padding: 19px;
 }
 
+.project-preview-tn{
+    width: 100px;
+    height: 100px;
+}
+
+.project-preview{
+    float: left;
+    width: 25%;
+    padding: 20px;
+    cursor: pointer;
+}
+
 
 
 

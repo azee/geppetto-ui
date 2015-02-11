@@ -2,7 +2,7 @@
 
 //     (c) 2010-2013 Jeremy Ashkenas, DocumentCloud Inc.
 //     Backbone may be freely distributed under the MIT license.
-//     For all details and documentation:
+//     For all.json details and documentation:
 //     http://backbonejs.org
 
 (function(){
@@ -67,7 +67,7 @@
 
     // A module that can be mixed in to *any object* in order to provide it with
     // custom events. You may bind with `on` or remove with `off` callback
-    // functions to an event; `trigger`-ing an event fires all callbacks in
+    // functions to an event; `trigger`-ing an event fires all.json callbacks in
     // succession.
     //
     //     var object = {};
@@ -77,8 +77,8 @@
     //
     var Events = Backbone.Events = {
 
-        // Bind an event to a `callback` function. Passing `"all"` will bind
-        // the callback to all events fired.
+        // Bind an event to a `callback` function. Passing `"all.json"` will bind
+        // the callback to all.json events fired.
         on: function(name, callback, context) {
             if (!eventsApi(this, 'on', name, [callback, context]) || !callback) return this;
             this._events || (this._events = {});
@@ -100,10 +100,10 @@
             return this.on(name, once, context);
         },
 
-        // Remove one or many callbacks. If `context` is null, removes all
-        // callbacks with that function. If `callback` is null, removes all
-        // callbacks for the event. If `name` is null, removes all bound
-        // callbacks for all events.
+        // Remove one or many callbacks. If `context` is null, removes all.json
+        // callbacks with that function. If `callback` is null, removes all.json
+        // callbacks for the event. If `name` is null, removes all.json bound
+        // callbacks for all.json events.
         off: function(name, callback, context) {
             var retain, ev, events, names, i, l, j, k;
             if (!this._events || !eventsApi(this, 'off', name, [callback, context])) return this;
@@ -133,9 +133,9 @@
             return this;
         },
 
-        // Trigger one or many events, firing all bound callbacks. Callbacks are
+        // Trigger one or many events, firing all.json bound callbacks. Callbacks are
         // passed the same arguments as `trigger` is, apart from the event name
-        // (unless you're listening on `"all"`, which will cause your callback to
+        // (unless you're listening on `"all.json"`, which will cause your callback to
         // receive the true name of the event as the first argument).
         trigger: function(name) {
             if (!this._events) return this;
@@ -261,7 +261,7 @@
     // A list of options to be attached directly to the model, if provided.
     var modelOptions = ['url', 'urlRoot', 'collection'];
 
-    // Attach all inheritable methods to the Model prototype.
+    // Attach all.json inheritable methods to the Model prototype.
     _.extend(Model.prototype, Events, {
 
         // A hash of attributes whose current and previous value differ.
@@ -353,7 +353,7 @@
                 unset ? delete current[attr] : current[attr] = val;
             }
 
-            // Trigger all relevant attribute changes.
+            // Trigger all.json relevant attribute changes.
             if (!silent) {
                 if (changes.length) this._pending = true;
                 for (var i = 0, l = changes.length; i < l; i++) {
@@ -381,7 +381,7 @@
             return this.set(attr, void 0, _.extend({}, options, {unset: true}));
         },
 
-        // Clear all attributes on the model, firing `"change"`.
+        // Clear all.json attributes on the model, firing `"change"`.
         clear: function(options) {
             var attrs = {};
             for (var key in this.attributes) attrs[key] = void 0;
@@ -395,7 +395,7 @@
             return _.has(this.changed, attr);
         },
 
-        // Return an object containing all the attributes that have changed, or
+        // Return an object containing all.json the attributes that have changed, or
         // false if there are no changed attributes. Useful for determining what
         // parts of a view need to be updated and/or what attributes need to be
         // persisted to the server. Unset attributes will be set to undefined.
@@ -419,7 +419,7 @@
             return this._previousAttributes[attr];
         },
 
-        // Get all of the attributes of the model at the time of the previous
+        // Get all.json of the attributes of the model at the time of the previous
         // `"change"` event.
         previousAttributes: function() {
             return _.clone(this._previousAttributes);
@@ -557,7 +557,7 @@
         },
 
         // Run validation against the next complete set of model attributes,
-        // returning `true` if all is well. Otherwise, fire an `"invalid"` event.
+        // returning `true` if all.json is well. Otherwise, fire an `"invalid"` event.
         _validate: function(attrs, options) {
             if (!options.validate || !this.validate) return true;
             attrs = _.extend({}, this.attributes, attrs);
@@ -587,7 +587,7 @@
     // If models tend to represent a single row of data, a Backbone Collection is
     // more analagous to a table full of data ... or a small slice or page of that
     // table, or a collection of rows that belong together for a particular reason
-    // -- all of the messages in this particular folder, all of the documents
+    // -- all.json of the messages in this particular folder, all.json of the documents
     // belonging to this particular author, and so on. Collections maintain
     // indexes of their models, both in order, and for lookup by `id`.
 
@@ -888,7 +888,7 @@
             return new this.constructor(this.models);
         },
 
-        // Private method to reset all internal state. Called when the collection
+        // Private method to reset all.json internal state. Called when the collection
         // is first initialized or reset.
         _reset: function() {
             this.length = 0;
@@ -994,7 +994,7 @@
     // List of view options to be merged as properties.
     var viewOptions = ['model', 'collection', 'el', 'id', 'attributes', 'className', 'tagName', 'events'];
 
-    // Set up all inheritable **Backbone.View** properties and methods.
+    // Set up all.json inheritable **Backbone.View** properties and methods.
     _.extend(View.prototype, Events, {
 
         // The default `tagName` of a View's element is `"div"`.
@@ -1071,7 +1071,7 @@
             return this;
         },
 
-        // Clears all callbacks previously bound to the view with `delegateEvents`.
+        // Clears all.json callbacks previously bound to the view with `delegateEvents`.
         // You usually don't need to use this, but may wish to if you have multiple
         // Backbone views attached to the same DOM element.
         undelegateEvents: function() {
@@ -1121,7 +1121,7 @@
     //
     // Turn on `Backbone.emulateHTTP` in order to send `PUT` and `DELETE` requests
     // as `POST`, with a `_method` parameter containing the true HTTP method,
-    // as well as all requests with the body as `application/x-www-form-urlencoded`
+    // as well as all.json requests with the body as `application/x-www-form-urlencoded`
     // instead of `application/json` with the model in a param named `model`.
     // Useful when interfacing with server-side languages like **PHP** that make
     // it difficult to read the body of `PUT` requests.
@@ -1221,7 +1221,7 @@
     var splatParam    = /\*\w+/g;
     var escapeRegExp  = /[\-{}\[\]+?.,\\\^$|#\s]/g;
 
-    // Set up all inheritable **Backbone.Router** properties and methods.
+    // Set up all.json inheritable **Backbone.Router** properties and methods.
     _.extend(Router.prototype, Events, {
 
         // Initialize is an empty function by default. Override it with your own
@@ -1258,7 +1258,7 @@
             return this;
         },
 
-        // Bind all defined routes to `Backbone.history`. We have to reverse the
+        // Bind all.json defined routes to `Backbone.history`. We have to reverse the
         // order of the routes here to support behavior where the most general
         // routes can be defined at the bottom of the route map.
         _bindRoutes: function() {
@@ -1328,7 +1328,7 @@
     // Has the history handling already been started?
     History.started = false;
 
-    // Set up all inheritable **Backbone.History** properties and methods.
+    // Set up all.json inheritable **Backbone.History** properties and methods.
     _.extend(History.prototype, Events, {
 
         // The default interval to poll for hash changes, if necessary, is
