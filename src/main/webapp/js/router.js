@@ -45,7 +45,8 @@ define([
                 },
                 headerOptions:{
                     activeTitle:'Dashboard',
-                    pageTitle : 'Dashboard'
+                    pageTitle: 'Dashboard',
+                    showFilter: true
                 }
             };
             require(['DashboardView'], this.showPage);

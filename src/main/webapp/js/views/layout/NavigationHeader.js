@@ -17,7 +17,8 @@ define([
         initialize: function (options) {
             _.bindAll(this, 'render'); // fixes loss of context for 'this' within methods
 
-//            TODO: pull menus from backend?
+            this.showFilter = options.showFilter;
+
             this.menus = [
                 {
                     title: "Dashboard",
@@ -26,7 +27,7 @@ define([
                 {
                     title: "Profile",
                     url: "#/user/profile"
-                },
+                }
             ];
 
             //initialize active menu based on options passed from router
@@ -75,7 +76,8 @@ define([
             this.$el.html(this.template({
                 "menus": this.menus,
                 "userMenus": this.userMenus,
-                "user": user
+                "user": user,
+                "showFilter": this.showFilter
             }));
 
             return this;
