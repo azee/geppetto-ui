@@ -22,6 +22,7 @@ define([
         },
 
         render : function() {
+            this.$el.empty();
             this.$el.append(this.template(this.model.toJSON()));
             return this;
         }
