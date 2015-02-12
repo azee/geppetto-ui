@@ -1,3 +1,253 @@
 {
-  "title": "Project 1"
+  "name": "Liquid Simlation",
+  "experiments": [
+    {
+      "modelParameters":[
+        {
+          "type": "SIMULATOR",
+          "value": "Simulator value",
+          "instancePath": "path.param"
+        },
+        {
+          "type": "SIMULATOR_TYPE",
+          "value": "Simulator_type parameter",
+          "instancePath": "path.param"
+        },
+        {
+          "type": "MODEL_PARAMETER",
+          "value": "Model parameter",
+          "instancePath": "path.param"
+        }
+      ],
+      "simulationRuns": [
+        {
+          "status": "QUEUED",
+          "results": {},
+          "startDate": "2012-04-23T18:25:43.511Z",
+          "endDate": "2012-04-23T18:25:43.511Z",
+          "simulationParameters": [
+            {
+              "type": "SIMULATOR",
+              "value": "Simulator value",
+              "instancePath": "path.param"
+            },
+            {
+              "type": "SIMULATOR_TYPE",
+              "value": "Simulator_type parameter",
+              "instancePath": "path.param"
+            },
+            {
+              "type": "MODEL_PARAMETER",
+              "value": "Model parameter",
+              "instancePath": "path.param"
+            }
+          ]
+        }
+      ],
+      "associatedViews": [],
+      "name": "a.param 1",
+      "description": "First param",
+      "creationDate": null,
+      "lastModified": null
+    },
+    {
+      "modelParameters":[
+        {
+          "type": "SIMULATOR",
+          "value": "Simulator value",
+          "instancePath": "path.param"
+        },
+        {
+          "type": "SIMULATOR_TYPE",
+          "value": "Simulator_type parameter",
+          "instancePath": "path.param"
+        },
+        {
+          "type": "MODEL_PARAMETER",
+          "value": "Model parameter",
+          "instancePath": "path.param"
+        }
+      ],
+      "simulationRuns": [
+        {
+          "status": "RUNNING",
+          "results": {},
+          "startDate": "2012-04-23T18:25:43.511Z",
+          "endDate": "2012-04-23T18:25:43.511Z",
+          "simulationParameters": [
+            {
+              "type": "SIMULATOR",
+              "value": "Simulator value",
+              "instancePath": "path.param"
+            },
+            {
+              "type": "SIMULATOR_TYPE",
+              "value": "Simulator_type parameter",
+              "instancePath": "path.param"
+            },
+            {
+              "type": "MODEL_PARAMETER",
+              "value": "Model parameter",
+              "instancePath": "path.param"
+            }
+          ]
+        }
+      ],
+      "associatedViews": [],
+      "name": "a.param 1",
+      "description": "First param",
+      "creationDate": null,
+      "lastModified": null
+    },
+    {
+      "modelParameters":[
+        {
+          "type": "SIMULATOR",
+          "value": "Simulator value",
+          "instancePath": "path.param"
+        },
+        {
+          "type": "SIMULATOR_TYPE",
+          "value": "Simulator_type parameter",
+          "instancePath": "path.param"
+        },
+        {
+          "type": "MODEL_PARAMETER",
+          "value": "Model parameter",
+          "instancePath": "path.param"
+        }
+      ],
+      "simulationRuns": [
+        {
+          "status": "ERROR",
+          "results": {},
+          "startDate": "2012-04-23T18:25:43.511Z",
+          "endDate": "2012-04-23T18:25:43.511Z",
+          "simulationParameters": [
+            {
+              "type": "SIMULATOR",
+              "value": "Simulator value",
+              "instancePath": "path.param"
+            },
+            {
+              "type": "SIMULATOR_TYPE",
+              "value": "Simulator_type parameter",
+              "instancePath": "path.param"
+            },
+            {
+              "type": "MODEL_PARAMETER",
+              "value": "Model parameter",
+              "instancePath": "path.param"
+            }
+          ]
+        }
+      ],
+      "associatedViews": [],
+      "name": "a.param 1",
+      "description": "First param",
+      "creationDate": null,
+      "lastModified": null
+    },
+    {
+      "modelParameters":[
+        {
+          "type": "SIMULATOR",
+          "value": "Simulator value",
+          "instancePath": "path.param"
+        },
+        {
+          "type": "SIMULATOR_TYPE",
+          "value": "Simulator_type parameter",
+          "instancePath": "path.param"
+        },
+        {
+          "type": "MODEL_PARAMETER",
+          "value": "Model parameter",
+          "instancePath": "path.param"
+        }
+      ],
+      "simulationRuns": [
+        {
+          "status": "COMPLETED",
+          "results": {},
+          "startDate": "2012-04-23T18:25:43.511Z",
+          "endDate": "2012-04-23T18:25:43.511Z",
+          "simulationParameters": [
+            {
+              "type": "SIMULATOR",
+              "value": "Simulator value",
+              "instancePath": "path.param"
+            },
+            {
+              "type": "SIMULATOR_TYPE",
+              "value": "Simulator_type parameter",
+              "instancePath": "path.param"
+            },
+            {
+              "type": "MODEL_PARAMETER",
+              "value": "Model parameter",
+              "instancePath": "path.param"
+            }
+          ]
+        }
+      ],
+      "associatedViews": [],
+      "name": "a.param 1",
+      "description": "First param",
+      "creationDate": null,
+      "lastModified": null
+    },
+    {
+      "modelParameters":[
+        {
+          "type": "SIMULATOR",
+          "value": "Simulator value",
+          "instancePath": "path.param"
+        },
+        {
+          "type": "SIMULATOR_TYPE",
+          "value": "Simulator_type parameter",
+          "instancePath": "path.param"
+        },
+        {
+          "type": "MODEL_PARAMETER",
+          "value": "Model parameter",
+          "instancePath": "path.param"
+        }
+      ],
+      "simulationRuns": [
+        {
+          "status": "DELETED",
+          "results": {},
+          "startDate": "2012-04-23T18:25:43.511Z",
+          "endDate": "2012-04-23T18:25:43.511Z",
+          "simulationParameters": [
+            {
+              "type": "SIMULATOR",
+              "value": "Simulator value",
+              "instancePath": "path.param"
+            },
+            {
+              "type": "SIMULATOR_TYPE",
+              "value": "Simulator_type parameter",
+              "instancePath": "path.param"
+            },
+            {
+              "type": "MODEL_PARAMETER",
+              "value": "Model parameter",
+              "instancePath": "path.param"
+            }
+          ]
+        }
+      ],
+      "associatedViews": [],
+      "name": "a.param 1",
+      "description": "First param",
+      "creationDate": null,
+      "lastModified": null
+    }
+  ],
+  "views": [],
+  "geppettoModel": {},
+  "activeSimulation": {}
 }

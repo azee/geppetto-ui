@@ -1,3 +1,16 @@
-<div>
-    {{title}}
+<h3>{{name}}</h3>
+<div role="tabpanel">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#details" aria-controls="details" role="tab" data-toggle="tab">Details</a></li>
+        <li role="presentation"><a href="#experiments" aria-controls="experiments" role="tab" data-toggle="tab">Experiments</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="details">Details</div>
+        <div role="tabpanel" class="tab-pane" id="experiments">Experiments</div>
+    </div>
+
 </div>
