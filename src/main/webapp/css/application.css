@@ -79,6 +79,32 @@ code {
     cursor: pointer;
 }
 
+.peoject-heading{
+    margin-bottom: 15px;
+    margin-top: -15px;
+}
+
+.experiments{
+    margin-top: 15px;
+}
+
+.instance-path{
+    text-align:left!important;
+}
+
+dt, dd{
+    margin-bottom: 7px;
+}
+
+.collapse-striped > div:nth-child(4n + 1) > div,
+.collapse-striped > div:nth-child(4n + 2) > div {
+    background-color: #fefefe;
+}
+
+.experiment-panel-heading{
+    border: none;
+}
+
 
 
 

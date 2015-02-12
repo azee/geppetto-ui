@@ -20,7 +20,7 @@ define([
         search: function (criteria) {
             if (criteria == "") return this;
             return _(this.filter(function (data) {
-                if (data.get("title").toLowerCase().indexOf(criteria) !== -1){
+                if (data.get("name").toLowerCase().indexOf(criteria) !== -1){
                     return true;
                 } else {
                     return false;

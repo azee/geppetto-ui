@@ -1,12 +1,12 @@
 {
-  "name": "Liquid Simlation",
+  "name": "Tyre Simlation",
   "experiments": [
     {
       "modelParameters":[
         {
           "type": "SIMULATOR",
           "value": "Simulator value",
-          "instancePath": "experiment.path.param"
+          "instancePath": "path.param"
         },
         {
           "type": "SIMULATOR_TYPE",
@@ -16,7 +16,7 @@
         {
           "type": "MODEL_PARAMETER",
           "value": "Model parameter",
-          "instancePath": "experiment.path.param"
+          "instancePath": "path.param"
         }
       ],
       "simulationRuns": [
