@@ -17,11 +17,8 @@ define([
         },
 
         initialize: function (options) {
-            if (options != null) {
-                this.id = options.id;
-                this.methodToURL['read'] = this.url + "/" + this.id;
-                this.methodToURL['delete'] = this.url + "/" + this.id;
-            }
+            this.methodToURL['read'] = this.url + "/" + this.id + ".json";
+            this.methodToURL['delete'] = this.url + "/" + this.id + ".json";
         },
 
         sync: function(method, model, options) {

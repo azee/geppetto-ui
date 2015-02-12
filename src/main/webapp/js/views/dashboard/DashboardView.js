@@ -5,22 +5,24 @@ define([
     'text!templates/dashboard/dashboardTemplate.hbs',
     'collections/projects/ProjectsCollection',
     'views/projects/ProjectPreviewView',
+    'views/projects/ProjectDetailsView',
     //dirty hack for handlebars loading wait
     'handlebars',
     'libs/ginny/ginny'
-], function ($, _, Backbone, dashboardTemplate, ProjectsCollection, ProjectPreviewView) {
+], function ($, _, Backbone, dashboardTemplate, ProjectsCollection, ProjectPreviewView, ProjectDetailsView) {
 
     var SomeBeansPageView = Backbone.View.extend({
 
         template: Handlebars.compile(dashboardTemplate),
 
-        //events:{
-        //    'keyup #filter':'filter'
-        //},
+        events:{
+            'click .project-preview':'showProject'
+        },
 
         initialize:function (options) {
             this.collection = new ProjectsCollection();
-             _.bindAll(this, 'render', 'remove', 'renderProjects', 'appendProjects', 'onError', 'filter'); // fixes loss of context for 'this' within methods
+             _.bindAll(this, 'render', 'remove', 'renderProjects', 'appendProjects',
+                 'onError', 'filter', 'showProject'); // fixes loss of context for 'this' within methods
             this.subviews = [];
 
         },
@@ -53,9 +55,21 @@ define([
             console.log("Error");
         },
 
-        filter:function (event) {
+        filter: function (event) {
             var criteria = $(event.target).val().toLowerCase();
             this.renderProjects(this.collection.search(criteria));
+        },
+
+        showProject: function(event){
+            var id = $(event.target).attr("project-id");
+            if (id === undefined){
+                id = $(event.target).parents(".project-preview").attr("project-id");
+            }
+            var projectDetailsView = new ProjectDetailsView({
+                id: id,
+                el: this.$el.find("#project-details")
+            });
+            projectDetailsView.render();
         },
 
         remove:function (attributes) {
