@@ -105,74 +105,32 @@ dt, dd{
     border: none;
 }
 
-
-
-
-/*.navbar .navbar-brand {*/
-    /*border-radius: 6px 0 0 6px;*/
-    /*color: #526476;*/
-    /*display: inline-block;*/
-    /*font-size: 24px;*/
-    /*font-weight: 700;*/
-    /*line-height: 29.55px;*/
-    /*margin-left: -15px;*/
-    /*padding: 23px 28px 24px 17px;*/
-    /*text-shadow: none;*/
-/*}*/
-
-
-/*.footer {
-    background-color: whiteSmoke;
-    border-top: 1px solid #E5E5E5;
-    bottom: 0;
-    clear: both;
-    height: 35px;
-    margin-bottom: 0;
-    position: fixed;
-    width: 100%;
+.circle {
+    position: relative;
+    width: 0.7em; height: 0.7em;
+    border-radius: 50%;
+    background: lightblue;
+    margin-top: 2px;
 }
 
-#content{
-    min-height: 100%;
+.QUEUED{
+    background: lightblue;
 }
 
-body{
-    height: 91%;
+.RUNNING{
+    background: blue;
 }
 
-html{
-    height: 100%;
+.ERROR{
+    background: red;
 }
 
-.widget-caption{
-    text-align: center;
+.COMPLETED{
+    background: green;
+
 }
 
-.wide-container{
-    width: 1060px;
-    margin-left: 15%;
+.DELETED{
+    background: grey;
+
 }
-
-.full-container{
-    width: 98%;
-    margin-left: 1%;
-    margin-right: 1%;
-}
-
-.unclickable {
-    pointer-events: none;
-}
-
-
-#page, #main, #mian{
-    height: 100%;
-}
-
-.itemsList {
-    height: 70%;
-    overflow: auto;
-}
-
-.container {
-    height: 100%;
-}*/

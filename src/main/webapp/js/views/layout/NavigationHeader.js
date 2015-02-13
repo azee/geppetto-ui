@@ -20,10 +20,10 @@ define([
             this.showFilter = options.showFilter;
 
             this.menus = [
-                {
-                    title: "Dashboard",
-                    url: "#/"
-                },
+                //{
+                //    title: "Dashboard",
+                //    url: "#/"
+                //},
                 {
                     title: "Profile",
                     url: "#/user/profile"

@@ -28,9 +28,16 @@
                 <div class="panel panel-default experiment-panel-heading">
                     <div class="panel-heading" role="tab" id="heading-{{@index}}">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#experiment-{{@index}}" aria-expanded="true" aria-controls="experiment-{{@index}}">
-                                {{name}}
-                            </a>
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <div class="circle {{status}}"></div>
+                                </div>
+                                <div class="col-md-11">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#experiment-{{@index}}" aria-expanded="true" aria-controls="experiment-{{@index}}">
+                                    {{name}}
+                                    </a>
+                                </div>
+                            </div>
                         </h4>
                     </div>
                 </div>
