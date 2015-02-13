@@ -79,6 +79,10 @@ code {
     cursor: pointer;
 }
 
+.project-preview-caption{
+    color: #f5f5f5;
+}
+
 .peoject-heading{
     margin-bottom: 15px;
     margin-top: -15px;

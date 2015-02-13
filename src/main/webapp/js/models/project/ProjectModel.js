@@ -21,6 +21,18 @@ define([
             this.methodToURL['delete'] = this.url + "/" + this.id + ".json";
         },
 
+        parse: function(data){
+            if (data === undefined || data.experiments === undefined || data.experiments.length === 0){
+                return data;
+            }
+            data.experiments.forEach(function(item){
+                if (item.simulationRuns !== undefined && item.simulationRuns.length > 0){
+                    item.status = item.simulationRuns[item.simulationRuns.length - 1].status;
+                }
+            });
+            return data;
+        },
+
         sync: function(method, model, options) {
             options = options || {};
             options.url = model.methodToURL[method.toLowerCase()];
